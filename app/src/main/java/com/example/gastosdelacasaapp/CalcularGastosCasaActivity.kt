@@ -28,9 +28,14 @@ class CalcularGastosCasaActivity : AppCompatActivity() {
         binding.carcularBoton.setOnClickListener {v->
             val numluz = binding.luzNumero
 
-            val numgas = binding.GasNumero
+            val numgas = binding.gasNumero
 
-            
+            val numagua = binding.aguaNumero
+
+            val sum1 = numluz + numgas
+            val sum2 = sum1 + numagua
+
+            binding.totalNumero.text = sum2.toString()
         }
     }
 }

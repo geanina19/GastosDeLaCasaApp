@@ -53,15 +53,15 @@
         android:layout_marginStart="30dp"
         android:text="Gas :"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/GasNumero"
-        app:layout_constraintEnd_toStartOf="@+id/GasNumero"
+        app:layout_constraintBottom_toBottomOf="@+id/gasNumero"
+        app:layout_constraintEnd_toStartOf="@+id/gasNumero"
         app:layout_constraintHorizontal_bias="0.348"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/GasNumero"
+        app:layout_constraintTop_toTopOf="@+id/gasNumero"
         app:layout_constraintVertical_bias="0.538" />
 
     <EditText
-        android:id="@+id/GasNumero"
+        android:id="@+id/gasNumero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -94,9 +94,9 @@
         android:hint="Ingrese cantidad"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/GasNumero"
-        app:layout_constraintStart_toStartOf="@+id/GasNumero"
-        app:layout_constraintTop_toBottomOf="@+id/GasNumero" />
+        app:layout_constraintEnd_toEndOf="@+id/gasNumero"
+        app:layout_constraintStart_toStartOf="@+id/gasNumero"
+        app:layout_constraintTop_toBottomOf="@+id/gasNumero" />
 
     <TextView
         android:id="@+id/textView4"

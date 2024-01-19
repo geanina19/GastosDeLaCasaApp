@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GastosDeLaCasaApp</string>
+    <string name="apellido">Apellido</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="crear_cuenta">Crear cuenta</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="todo">TODO</string>
+    <string name="nombre">Nombre</string>
+    <string name="o">O</string>
+</resources>

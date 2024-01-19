@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InicioSesionActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="64dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/settings_24px"
+        android:contentDescription="@string/todo" />
+
+    <EditText
+        android:id="@+id/nombreUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:ems="10"
+        android:hint="@string/nombre"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/apellidoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/apellido"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        app:layout_constraintEnd_toEndOf="@+id/nombreUsuario"
+        app:layout_constraintStart_toStartOf="@+id/nombreUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/nombreUsuario" />
+
+    <EditText
+        android:id="@+id/contrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/contrasena"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        app:layout_constraintEnd_toEndOf="@+id/apellidoUsuario"
+        app:layout_constraintStart_toStartOf="@+id/apellidoUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/apellidoUsuario"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/botonIniciarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/iniciar_sesion"
+        app:layout_constraintEnd_toEndOf="@+id/contrasena"
+        app:layout_constraintStart_toStartOf="@+id/contrasena"
+        app:layout_constraintTop_toBottomOf="@+id/contrasena" />
+
+    <TextView
+        android:id="@+id/textViewO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/o"
+        app:layout_constraintEnd_toEndOf="@+id/botonIniciarSesion"
+        app:layout_constraintStart_toStartOf="@+id/botonIniciarSesion"
+        app:layout_constraintTop_toBottomOf="@+id/botonIniciarSesion" />
+
+    <Button
+        android:id="@+id/buttonCrearCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/crear_cuenta"
+        app:layout_constraintEnd_toEndOf="@+id/textViewO"
+        app:layout_constraintStart_toStartOf="@+id/textViewO"
+        app:layout_constraintTop_toBottomOf="@+id/textViewO" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

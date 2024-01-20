@@ -18,7 +18,7 @@ class InicioSesionActivity : AppCompatActivity() {
             {
                 Toast.makeText(
                     this,
-                    "Debe intriducir un nombre de usuario",
+                    "Debe intriducir su nombre",
                     Toast.LENGTH_SHORT)
                     .show()
             }

@@ -16,26 +16,19 @@ class CalcularGastosCasaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCalcularGastosCasaBinding.inflate(layoutInflater)
         setContentView(binding.root)
-/*
-        val formulario = intent.getParcelableExtra(Params.FORMULARIO.electricity, Formulario::class.java)
 
-        formulario?.let {formulario -> binding.
+        // Obtén el formulario desde el intent
+        val formulario = intent.getParcelableExtra<Formulario>(Params.FORMULARIO.name)
 
-        }
+        binding.carcularBoton.setOnClickListener { v ->
+            val numLuz = binding.luzNumero.text.toString().toDoubleOrNull() ?: 0.0
+            val numGas = binding.gasNumero.text.toString().toDoubleOrNull() ?: 0.0
+            val numAgua = binding.aguaNumero.text.toString().toDoubleOrNull() ?: 0.0
 
- */
+            // Sumar los tres valores directamente
+            val total = numLuz + numGas + numAgua
 
-        binding.carcularBoton.setOnClickListener {v->
-            val numluz = binding.luzNumero
-
-            val numgas = binding.gasNumero
-
-            val numagua = binding.aguaNumero
-
-            val sum1 = numluz + numgas
-            val sum2 = sum1 + numagua
-
-            binding.totalNumero.text = sum2.toString()
+            binding.totalNumero.text = total.toString()
         }
     }
 }

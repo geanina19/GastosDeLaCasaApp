@@ -8,136 +8,108 @@
     tools:context=".CalcularGastosCasaActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/enunciado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="30dp"
-        android:text="Introduce la canidad a pagar, €"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/introduce_la_cantidad_a_pagar"
+        app:layout_constraintBottom_toTopOf="@+id/electricidadNumero"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/labelLuz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Electricidad :"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:flow_horizontalAlign="center"
-        app:flow_verticalAlign="center"
-        app:layout_constraintBottom_toBottomOf="@+id/luzNumero"
-        app:layout_constraintEnd_toStartOf="@+id/luzNumero"
-        app:layout_constraintHorizontal_bias="0.164"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/luzNumero"
-        app:layout_constraintVertical_bias="0.482" />
 
     <EditText
-        android:id="@+id/luzNumero"
-        android:layout_width="wrap_content"
+        android:id="@+id/electricidadNumero"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="Ingrese cantidad"
+        android:hint="@string/electricidad"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/labelGas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="Gas :"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/gasNumero"
-        app:layout_constraintEnd_toStartOf="@+id/gasNumero"
-        app:layout_constraintHorizontal_bias="0.348"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gasNumero"
-        app:layout_constraintVertical_bias="0.538" />
+        app:layout_constraintBottom_toTopOf="@+id/gasNumero"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/enunciado"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/gasNumero"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="Ingrese cantidad"
+        android:hint="@string/gas"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/luzNumero"
-        app:layout_constraintStart_toStartOf="@+id/luzNumero"
-        app:layout_constraintTop_toBottomOf="@+id/luzNumero" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Agua :"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/aguaNumero"
-        app:layout_constraintEnd_toStartOf="@+id/aguaNumero"
-        app:layout_constraintHorizontal_bias="0.477"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/aguaNumero" />
+        app:layout_constraintBottom_toTopOf="@+id/aguaNumero"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/electricidadNumero"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/aguaNumero"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="Ingrese cantidad"
+        android:hint="@string/agua"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/gasNumero"
-        app:layout_constraintStart_toStartOf="@+id/gasNumero"
-        app:layout_constraintTop_toBottomOf="@+id/gasNumero" />
+        app:layout_constraintBottom_toTopOf="@+id/separacion"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/gasNumero"
+        android:autofillHints="" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/separacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="_________________________________________________________"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:text="@string/separacion1"
+        app:layout_constraintBottom_toTopOf="@+id/totalNumero"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/aguaNumero" />
-
-    <TextView
-        android:id="@+id/labelTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total :"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/totalNumero"
-        app:layout_constraintEnd_toStartOf="@+id/totalNumero"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/totalNumero" />
 
     <TextView
         android:id="@+id/totalNumero"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="@+id/aguaNumero"
-        app:layout_constraintStart_toStartOf="@+id/aguaNumero"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        android:layout_marginTop="10dp"
+        android:hint="@string/total"
+        android:textColorHint="#546E7A"
+        app:layout_constraintBottom_toTopOf="@+id/carcularBoton"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/separacion" />
 
     <Button
         android:id="@+id/carcularBoton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="Calcular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.281"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/labelTotal" />
+        android:layout_marginTop="10dp"
+        android:text="@string/calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/totalNumero" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

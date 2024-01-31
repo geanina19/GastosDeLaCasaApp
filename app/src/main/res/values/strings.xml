@@ -7,4 +7,12 @@
     <string name="todo">TODO</string>
     <string name="nombre">Nombre</string>
     <string name="o">O</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="introduce_la_cantidad_a_pagar">Introduce la cantidad a pagar, €</string>
+    <string name="agua">Agua</string>
+    <string name="calcular">Calcular</string>
+    <string name="electricidad">Electricidad</string>
+    <string name="gas">Gas</string>
+    <string name="separacion1">_________________________________________________________</string>
+    <string name="total">Total</string>
 </resources>

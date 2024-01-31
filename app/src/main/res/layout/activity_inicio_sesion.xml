@@ -6,45 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".InicioSesionActivity">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="64dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/settings_24px"
-        android:contentDescription="@string/todo" />
-
     <EditText
         android:id="@+id/nombreUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="152dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/nombre"
         android:inputType="text"
         android:minHeight="48dp"
         android:textColorHint="#546E7A"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintBottom_toTopOf="@+id/apellidoUsuario"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/botonAjustes" />
 
     <EditText
         android:id="@+id/apellidoUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/apellido"
         android:inputType="text"
         android:minHeight="48dp"
         android:textColorHint="#546E7A"
+        app:layout_constraintBottom_toTopOf="@+id/contrasena"
         app:layout_constraintEnd_toEndOf="@+id/nombreUsuario"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/nombreUsuario"
         app:layout_constraintTop_toBottomOf="@+id/nombreUsuario" />
 
@@ -52,24 +41,26 @@
         android:id="@+id/contrasena"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/contrasena"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColorHint="#546E7A"
+        app:layout_constraintBottom_toTopOf="@+id/botonIniciarSesion"
         app:layout_constraintEnd_toEndOf="@+id/apellidoUsuario"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/apellidoUsuario"
-        app:layout_constraintTop_toBottomOf="@+id/apellidoUsuario"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/apellidoUsuario" />
 
     <Button
         android:id="@+id/botonIniciarSesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:text="@string/iniciar_sesion"
+        app:layout_constraintBottom_toTopOf="@+id/textViewO"
         app:layout_constraintEnd_toEndOf="@+id/contrasena"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/contrasena"
         app:layout_constraintTop_toBottomOf="@+id/contrasena" />
 
@@ -77,9 +68,10 @@
         android:id="@+id/textViewO"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:text="@string/o"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCrearCuenta"
         app:layout_constraintEnd_toEndOf="@+id/botonIniciarSesion"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/botonIniciarSesion"
         app:layout_constraintTop_toBottomOf="@+id/botonIniciarSesion" />
 
@@ -87,10 +79,37 @@
         android:id="@+id/buttonCrearCuenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:text="@string/crear_cuenta"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textViewO"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/textViewO"
         app:layout_constraintTop_toBottomOf="@+id/textViewO" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <Button
+        android:id="@+id/botonAjustes"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/settings_24px"
+        android:contentDescription="@string/ajustes"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

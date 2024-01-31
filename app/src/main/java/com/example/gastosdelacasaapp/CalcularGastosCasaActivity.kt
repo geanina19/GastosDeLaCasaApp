@@ -21,12 +21,12 @@ class CalcularGastosCasaActivity : AppCompatActivity() {
         val formulario = intent.getParcelableExtra<Formulario>(Params.FORMULARIO.name)
 
         binding.carcularBoton.setOnClickListener { v ->
-            val numLuz = binding.luzNumero.text.toString().toDoubleOrNull() ?: 0.0
+            val numElecticidad = binding.electricidadNumero.text.toString().toDoubleOrNull() ?: 0.0
             val numGas = binding.gasNumero.text.toString().toDoubleOrNull() ?: 0.0
             val numAgua = binding.aguaNumero.text.toString().toDoubleOrNull() ?: 0.0
 
             // Sumar los tres valores directamente
-            val total = numLuz + numGas + numAgua
+            val total = numElecticidad + numGas + numAgua
 
             binding.totalNumero.text = total.toString()
         }

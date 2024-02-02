@@ -3,6 +3,7 @@ package com.example.gastosdelacasaapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.gastosdelacasaapp.databinding.ActivityCalcularGastosCasaBinding
+import com.example.gastosdelacasaapp.model.Factura
 
 class CalcularGastosCasaActivity : AppCompatActivity() {
 
@@ -18,7 +19,7 @@ class CalcularGastosCasaActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Obtén el formulario desde el intent
-        val formulario = intent.getParcelableExtra<Formulario>(Params.FORMULARIO.name)
+        val factura = intent.getParcelableExtra<Factura>(Params.FORMULARIO.name)
 
         binding.carcularBoton.setOnClickListener { v ->
             val numElecticidad = binding.electricidadNumero.text.toString().toDoubleOrNull() ?: 0.0

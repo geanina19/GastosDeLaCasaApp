@@ -3,11 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/editarItem"
-        android:title="@string/editar2" />
-    <item
-        android:id="@+id/eliminarItem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:title="@string/eliminar2" />
+        android:id="@+id/volverPrincipioItem"
+        android:title="@string/voler" />
 </menu>

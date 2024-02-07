@@ -1,5 +1,6 @@
 package com.example.gastosdelacasaapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +9,7 @@ import com.example.gastosdelacasaapp.databinding.ActivityInicioSesionBinding
 
 class InicioSesionActivity : AppCompatActivity() {
     private lateinit var binding: ActivityInicioSesionBinding
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityInicioSesionBinding.inflate(layoutInflater)
@@ -26,9 +28,8 @@ class InicioSesionActivity : AppCompatActivity() {
                 if (binding.contrasena.text.toString() == "Nohay2sin3") {
                     val intent = Intent (
                         this,
-                        VerFacturasActivity::class.java)
+                        VerCrearActivity::class.java)
                         startActivity(intent)
-                    true
                 }
                 else {
                     Toast.makeText(

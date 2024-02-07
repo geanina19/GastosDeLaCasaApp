@@ -36,4 +36,5 @@
     <string name="eliminarbutton">eliminarButton</string>
     <string name="ver_facturas">Ver facturas</string>
     <string name="crear_factura">Crear factura</string>
+    <string name="voler">Voler</string>
 </resources>

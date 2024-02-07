@@ -49,24 +49,18 @@ class CalcularGastosCasaActivity : AppCompatActivity() {
             // Sumar los tres valores directamente
             val total = numElecticidad + numGas + numAgua
 
-            /*
-
             val factura = Factura(
-
+                facturaId = 0,
                 electricity = numElecticidad,
                 gas = numGas,
                 water = numAgua
             )
 
-
             db
                 .bookDao()
                 .save(factura)
 
-
             finish()
-
-             */
         }
     }
 }

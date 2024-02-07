@@ -32,4 +32,8 @@
     <string name="mas2">+</string>
     <string name="todo6">TODO</string>
     <string name="todo7">TODO</string>
+    <string name="editarbotton">editarBotton</string>
+    <string name="eliminarbutton">eliminarButton</string>
+    <string name="ver_facturas">Ver facturas</string>
+    <string name="crear_factura">Crear factura</string>
 </resources>

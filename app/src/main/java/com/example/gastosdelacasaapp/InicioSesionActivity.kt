@@ -24,8 +24,11 @@ class InicioSesionActivity : AppCompatActivity() {
             }
             else {
                 if (binding.contrasena.text.toString() == "Nohay2sin3") {
-                    val calcularGastosActivityIntent = Intent (this, CalcularGastosCasaActivity::class.java)
-                    startActivity(calcularGastosActivityIntent)
+                    val intent = Intent (
+                        this,
+                        VerFacturasActivity::class.java)
+                        startActivity(intent)
+                    true
                 }
                 else {
                     Toast.makeText(

@@ -16,12 +16,10 @@ interface FacturaDao {
 
     //---------------------eliminar---------------
     //electricidad
-    @Query("DELETE FROM factura WHERE electricity=:electricity")
-    fun delete(electricity: Double): Double
+    @Query("DELETE FROM factura WHERE facturaId=:facturaId")
+    fun delete(facturaId: Int): Int
 
 
-    //@Query("SELECT * FROM factura WHERE gas=:gas")
-    //fun listAuthorBooks(gas: String): List<Factura>
 
     @Insert
     fun save(book: Factura)

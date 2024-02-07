@@ -45,8 +45,8 @@ class FacturaAdapter(
 
         binding.waterTextView.text = factura.water.toString()
 
-        /*
-        binding.eliminarImageView.setOnClickListener{
+
+        binding.eliminarButton.setOnClickListener{
             val deletedRows = db.bookDao().delete(factura.facturaId)
 
             facturas = db.bookDao().list()
@@ -56,6 +56,5 @@ class FacturaAdapter(
                 Toast.makeText(context, "No se ha eliminado ninguna factura", Toast.LENGTH_LONG).show()
             }
         }
-        */
     }
 }

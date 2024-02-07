@@ -5,10 +5,10 @@
         android:id="@+id/verFacturasActivityItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title="Ver facturas" />
+        android:title="@string/ver_facturas" />
     <item
-        android:id="@+id/addFacturaItem"
+        android:id="@+id/calcularFacturaActivityItems"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title="Añadir factura" />
+        android:title="@string/crear_factura" />
 </menu>

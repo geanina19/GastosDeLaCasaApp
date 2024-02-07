@@ -37,4 +37,5 @@
     <string name="ver_facturas">Ver facturas</string>
     <string name="crear_factura">Crear factura</string>
     <string name="voler">Voler</string>
+    <string name="volver">Volver</string>
 </resources>

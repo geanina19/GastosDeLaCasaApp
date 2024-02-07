@@ -1,5 +1,6 @@
 package com.example.gastosdelacasaapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.room.Room
@@ -61,6 +62,11 @@ class CalcularGastosCasaActivity : AppCompatActivity() {
                 .save(factura)
 
             finish()
+
+            val intent = Intent (
+                this,
+                VerFacturasActivity::class.java)
+            startActivity(intent)
         }
     }
 }

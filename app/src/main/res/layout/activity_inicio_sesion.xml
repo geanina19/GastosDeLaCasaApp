@@ -19,7 +19,8 @@
         app:layout_constraintBottom_toTopOf="@+id/apellidoUsuario"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/botonAjustes" />
+        app:layout_constraintTop_toBottomOf="@+id/botonAjustes"
+        app:layout_constraintVertical_chainStyle="spread" />
 
     <EditText
         android:id="@+id/apellidoUsuario"

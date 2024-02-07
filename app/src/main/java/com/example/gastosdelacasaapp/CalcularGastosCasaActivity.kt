@@ -2,12 +2,16 @@ package com.example.gastosdelacasaapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.room.Room
+import com.example.gastosdelacasaapp.database.AppDatabase
 import com.example.gastosdelacasaapp.databinding.ActivityCalcularGastosCasaBinding
 import com.example.gastosdelacasaapp.model.Factura
 
 class CalcularGastosCasaActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCalcularGastosCasaBinding
+
+    private lateinit var db: AppDatabase
 
     enum class Params{
         FORMULARIO;
@@ -18,8 +22,13 @@ class CalcularGastosCasaActivity : AppCompatActivity() {
         binding = ActivityCalcularGastosCasaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Obtén el formulario desde el intent
-        val factura = intent.getParcelableExtra<Factura>(Params.FORMULARIO.name)
+        db = Room
+            .databaseBuilder(
+                this,
+                AppDatabase::class.java,
+                AppDatabase.DATABASE_NAME
+            )
+            .allowMainThreadQueries().build()
 
         binding.carcularBoton.setOnClickListener { v ->
             val numElecticidad = binding.electricidadNumero.text.toString().toDoubleOrNull() ?: 0.0
@@ -30,6 +39,34 @@ class CalcularGastosCasaActivity : AppCompatActivity() {
             val total = numElecticidad + numGas + numAgua
 
             binding.totalNumero.text = total.toString()
+        }
+
+        binding.anadirButton.setOnClickListener {
+            val numElecticidad = binding.electricidadNumero.text.toString().toDoubleOrNull() ?: 0.0
+            val numGas = binding.gasNumero.text.toString().toDoubleOrNull() ?: 0.0
+            val numAgua = binding.aguaNumero.text.toString().toDoubleOrNull() ?: 0.0
+
+            // Sumar los tres valores directamente
+            val total = numElecticidad + numGas + numAgua
+
+            /*
+
+            val factura = Factura(
+
+                electricity = numElecticidad,
+                gas = numGas,
+                water = numAgua
+            )
+
+
+            db
+                .bookDao()
+                .save(factura)
+
+
+            finish()
+
+             */
         }
     }
 }

@@ -15,4 +15,21 @@
     <string name="gas">Gas</string>
     <string name="separacion1">_________________________________________________________</string>
     <string name="total">Total</string>
+    <string name="todo1">TODO</string>
+    <string name="electricity">Electricity</string>
+    <string name="todo2">TODO</string>
+    <string name="factura_id">Factura : id</string>
+    <string name="gas2">Gas</string>
+    <string name="editar">editar</string>
+    <string name="eliminar">eliminar</string>
+    <string name="todo4">TODO</string>
+    <string name="water">Water</string>
+    <string name="editar2">Editar</string>
+    <string name="eliminar2">Eliminar</string>
+    <string name="button">Button</string>
+    <string name="anadir">Añadir</string>
+    <string name="mas1">+</string>
+    <string name="mas2">+</string>
+    <string name="todo6">TODO</string>
+    <string name="todo7">TODO</string>
 </resources>

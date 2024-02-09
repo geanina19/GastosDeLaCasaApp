@@ -9,10 +9,11 @@
         android:id="@+id/idFacturaTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="4dp"
         android:text="@string/factura_id"
         android:textAlignment="center"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,7 +35,7 @@
         android:id="@+id/electricityImageView"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="@string/todo1"
         app:layout_constraintEnd_toStartOf="@+id/electricityTextView"
         app:layout_constraintHorizontal_bias="0.5"
@@ -53,7 +54,8 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/electricityImageView"
-        app:layout_constraintTop_toTopOf="@+id/electricityImageView" />
+        app:layout_constraintTop_toTopOf="@+id/electricityImageView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/gasImageView"
@@ -98,7 +100,7 @@
         android:id="@+id/totalTextView"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="@string/total2"
         app:layout_constraintEnd_toStartOf="@+id/editarButton"
         app:layout_constraintHorizontal_bias="0.5"

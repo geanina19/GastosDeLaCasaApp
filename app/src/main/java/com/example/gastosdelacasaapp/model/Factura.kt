@@ -14,4 +14,9 @@ data class Factura(
     @ColumnInfo ("electricity") val electricity : Double,
     @ColumnInfo ("gas") val gas : Double,
     @ColumnInfo ("water") val water : Double
-): Parcelable
+): Parcelable{
+
+    fun total(): Double {
+        return gas + electricity + water
+    }
+}

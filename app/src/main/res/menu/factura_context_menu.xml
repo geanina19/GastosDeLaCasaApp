@@ -3,6 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/volverPrincipioItem"
-        android:title="@string/volver" />
+        android:id="@+id/nada2"
+        android:title="@string/crear_factura1" />
 </menu>

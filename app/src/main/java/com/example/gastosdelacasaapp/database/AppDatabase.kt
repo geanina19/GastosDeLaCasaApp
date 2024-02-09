@@ -14,7 +14,7 @@ abstract class AppDatabase: RoomDatabase() {
     companion object {
         val DATABASE_NAME = "contabilidad"
     }
-    abstract fun bookDao(): FacturaDao
+    abstract fun facturaDao(): FacturaDao
     abstract fun customerDao(): CustomerDao
     abstract fun rentalDao(): RentalDao
 }

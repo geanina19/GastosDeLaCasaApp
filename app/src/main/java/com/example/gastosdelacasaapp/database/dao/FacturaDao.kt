@@ -22,5 +22,5 @@ interface FacturaDao {
 
 
     @Insert
-    fun save(book: Factura)
+    fun save(factura: Factura)
 }

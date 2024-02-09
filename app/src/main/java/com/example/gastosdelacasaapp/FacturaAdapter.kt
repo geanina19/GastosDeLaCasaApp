@@ -45,11 +45,12 @@ class FacturaAdapter(
 
         binding.waterTextView.text = factura.water.toString()
 
+        binding.totalTextView.text = factura.total().toString()
 
         binding.eliminarButton.setOnClickListener{
-            val deletedRows = db.bookDao().delete(factura.facturaId)
+            val deletedRows = db.facturaDao().delete(factura.facturaId)
 
-            facturas = db.bookDao().list()
+            facturas = db.facturaDao().list()
 
             notifyDataSetChanged()
             if(deletedRows == 0) {

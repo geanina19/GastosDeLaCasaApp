@@ -38,4 +38,8 @@
     <string name="crear_factura">Crear factura</string>
     <string name="voler">Voler</string>
     <string name="volver">Volver</string>
+    <string name="total2">TOTAL</string>
+    <string name="crear_factura1">Crear factura</string>
+    <string name="editarbutton1">editarButton</string>
+    <string name="eliminatbutton1">eliminatButton</string>
 </resources>

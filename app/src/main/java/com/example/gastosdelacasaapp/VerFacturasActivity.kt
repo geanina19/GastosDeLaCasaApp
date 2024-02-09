@@ -3,21 +3,15 @@ package com.example.gastosdelacasaapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.gastosdelacasaapp.R
 import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import androidx.core.view.children
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import com.example.gastosdelacasaapp.database.AppDatabase
 import com.example.gastosdelacasaapp.databinding.ActivityVerFacturasBinding
-import com.example.gastosdelacasaapp.model.Factura
-import com.example.gastosdelacasaapp.model.Customer
-import com.example.gastosdelacasaapp.model.Rental
-import java.util.Date
 
 class VerFacturasActivity : AppCompatActivity()
 {
@@ -45,7 +39,7 @@ class VerFacturasActivity : AppCompatActivity()
             GridLayoutManager(this, 1, RecyclerView.VERTICAL, false)
 
         binding.facturasRecyclerView.adapter = FacturaAdapter(
-            db.bookDao().list(), this, db
+            db.facturaDao().list(), this, db
         )
 
     }
@@ -59,9 +53,9 @@ class VerFacturasActivity : AppCompatActivity()
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.volverPrincipioItem -> {
+            R.id.nada2 -> {
                 val intent = Intent(
-                    this, VerCrearActivity::class.java
+                    this, CalcularGastosCasaActivity::class.java
                 )
                 startActivity(intent)
             }
@@ -74,7 +68,7 @@ class VerFacturasActivity : AppCompatActivity()
 
         val adapter = binding.facturasRecyclerView.adapter as FacturaAdapter
 
-        adapter.facturas = db.bookDao().list()
+        adapter.facturas = db.facturaDao().list()
 
         adapter.notifyDataSetChanged()
     }

@@ -58,10 +58,10 @@ class CalcularGastosCasaActivity : AppCompatActivity() {
             )
 
             db
-                .bookDao()
+                .facturaDao()
                 .save(factura)
 
-            finish()
+            //finish()
 
             val intent = Intent (
                 this,

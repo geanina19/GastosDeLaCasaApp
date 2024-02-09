@@ -28,7 +28,7 @@ class InicioSesionActivity : AppCompatActivity() {
                 if (binding.contrasena.text.toString() == "Nohay2sin3") {
                     val intent = Intent (
                         this,
-                        VerCrearActivity::class.java)
+                        VerFacturasActivity::class.java)
                         startActivity(intent)
                 }
                 else {

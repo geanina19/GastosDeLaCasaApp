@@ -53,7 +53,7 @@ class VerFacturasActivity : AppCompatActivity()
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.nada2 -> {
+            R.id.crearFacturaItem -> {
                 val intent = Intent(
                     this, CalcularGastosCasaActivity::class.java
                 )

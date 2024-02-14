@@ -42,4 +42,9 @@
     <string name="crear_factura1">Crear factura</string>
     <string name="editarbutton1">editarButton</string>
     <string name="eliminatbutton1">eliminatButton</string>
+    <string name="nombre_usuario">Nombre usuario</string>
+    <string name="crear_cuenta3">Crear cuenta</string>
+    <string name="contrasena3">Contraseña</string>
+    <string name="email">Email</string>
+    <string name="nombre_usuario3">Nombre usuario</string>
 </resources>

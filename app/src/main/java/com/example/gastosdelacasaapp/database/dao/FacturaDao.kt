@@ -15,11 +15,12 @@ interface FacturaDao {
     fun list(): List<Factura>
 
     //---------------------eliminar---------------
-    //electricidad
     @Query("DELETE FROM factura WHERE facturaId=:facturaId")
     fun delete(facturaId: Int): Int
 
-
+    //---------------------modificar---------------
+    @Update
+    fun update(factura: Factura)
 
     @Insert
     fun save(factura: Factura)

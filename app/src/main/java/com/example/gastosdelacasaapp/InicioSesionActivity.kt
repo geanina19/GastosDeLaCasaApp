@@ -40,5 +40,12 @@ class InicioSesionActivity : AppCompatActivity() {
                 }
             }
         }
+
+        binding.buttonCrearCuentaIniciarSesionActivity.setOnClickListener {
+            val intent = Intent (
+                this,
+                CrearCuentaActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

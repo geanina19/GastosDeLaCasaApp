@@ -12,31 +12,45 @@
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/nombre"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:textColorHint="#546E7A"
-        app:layout_constraintBottom_toTopOf="@+id/apellidoUsuario"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/botonAjustes"
-        app:layout_constraintVertical_chainStyle="spread" />
-
-    <EditText
-        android:id="@+id/apellidoUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/apellido"
+        android:hint="@string/nombre_usuario"
         android:inputType="text"
         android:minHeight="48dp"
         android:textColorHint="#546E7A"
         app:layout_constraintBottom_toTopOf="@+id/contrasena"
-        app:layout_constraintEnd_toEndOf="@+id/nombreUsuario"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/nombreUsuario"
-        app:layout_constraintTop_toBottomOf="@+id/nombreUsuario" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/botonAjustes" />
+
+    <Button
+        android:id="@+id/buttonCrearCuentaIniciarSesionActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/crear_cuenta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewO"
+        app:layout_constraintStart_toStartOf="@+id/textViewO"
+        app:layout_constraintTop_toBottomOf="@+id/textViewO" />
+
+    <Button
+        android:id="@+id/botonIniciarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/iniciar_sesion"
+        app:layout_constraintBottom_toTopOf="@+id/textViewO"
+        app:layout_constraintEnd_toEndOf="@+id/contrasena"
+        app:layout_constraintStart_toStartOf="@+id/contrasena"
+        app:layout_constraintTop_toBottomOf="@+id/contrasena" />
+
+    <TextView
+        android:id="@+id/textViewO"
+        android:layout_width="13dp"
+        android:layout_height="17dp"
+        android:text="@string/o"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCrearCuentaIniciarSesionActivity"
+        app:layout_constraintEnd_toEndOf="@+id/botonIniciarSesion"
+        app:layout_constraintStart_toStartOf="@+id/botonIniciarSesion"
+        app:layout_constraintTop_toBottomOf="@+id/botonIniciarSesion"
+        tools:ignore="TextSizeCheck" />
 
     <EditText
         android:id="@+id/contrasena"
@@ -49,43 +63,9 @@
         android:minHeight="48dp"
         android:textColorHint="#546E7A"
         app:layout_constraintBottom_toTopOf="@+id/botonIniciarSesion"
-        app:layout_constraintEnd_toEndOf="@+id/apellidoUsuario"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/apellidoUsuario"
-        app:layout_constraintTop_toBottomOf="@+id/apellidoUsuario" />
-
-    <Button
-        android:id="@+id/botonIniciarSesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/iniciar_sesion"
-        app:layout_constraintBottom_toTopOf="@+id/textViewO"
-        app:layout_constraintEnd_toEndOf="@+id/contrasena"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/contrasena"
-        app:layout_constraintTop_toBottomOf="@+id/contrasena" />
-
-    <TextView
-        android:id="@+id/textViewO"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/o"
-        app:layout_constraintBottom_toTopOf="@+id/buttonCrearCuenta"
-        app:layout_constraintEnd_toEndOf="@+id/botonIniciarSesion"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/botonIniciarSesion"
-        app:layout_constraintTop_toBottomOf="@+id/botonIniciarSesion" />
-
-    <Button
-        android:id="@+id/buttonCrearCuenta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/crear_cuenta"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textViewO"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/textViewO"
-        app:layout_constraintTop_toBottomOf="@+id/textViewO" />
+        app:layout_constraintEnd_toEndOf="@+id/nombreUsuario"
+        app:layout_constraintStart_toStartOf="@+id/nombreUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/nombreUsuario" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -105,12 +85,10 @@
         android:id="@+id/botonAjustes"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="20dp"
         android:background="@drawable/settings_24px"
         android:contentDescription="@string/ajustes"
+        app:layout_constraintBottom_toTopOf="@+id/nombreUsuario"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

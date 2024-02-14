@@ -14,6 +14,8 @@ class CalcularGastosCasaActivity : AppCompatActivity() {
 
     private lateinit var db: AppDatabase
 
+    private var facturaEditar: Factura? = null
+
     enum class Params{
         FORMULARIO;
     }
@@ -30,6 +32,8 @@ class CalcularGastosCasaActivity : AppCompatActivity() {
                 AppDatabase.DATABASE_NAME
             )
             .allowMainThreadQueries().build()
+
+        facturaEditar = intent.getParcelableExtra(Params.FORMULARIO.name)
 
         binding.carcularBoton.setOnClickListener { v ->
             val numElecticidad = binding.electricidadNumero.text.toString().toDoubleOrNull() ?: 0.0

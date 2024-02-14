@@ -3,6 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nada2"
+        android:id="@+id/crearFacturaItem"
         android:title="@string/crear_factura1" />
 </menu>

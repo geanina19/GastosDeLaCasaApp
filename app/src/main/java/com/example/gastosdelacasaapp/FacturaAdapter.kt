@@ -1,6 +1,7 @@
 package com.example.gastosdelacasaapp
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -57,5 +58,14 @@ class FacturaAdapter(
                 Toast.makeText(context, "No se ha eliminado ninguna factura", Toast.LENGTH_LONG).show()
             }
         }
+
+        binding.editarButton.setOnClickListener {
+            // Actualiza la Factura existente en la base de datos
+            val facturaToUpdate = db.facturaDao().update(factura)
+
+            facturas = db.facturaDao().list()
+
+        }
+
     }
 }

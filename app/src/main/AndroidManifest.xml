@@ -15,10 +15,7 @@
         android:theme="@style/Theme.GastosDeLaCasaApp"
         tools:targetApi="31">
         <activity
-            android:name=".PruebaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".VerCrearActivity"
+            android:name=".CrearCuentaActivity"
             android:exported="true" />
         <activity
             android:name=".VerFacturasActivity"

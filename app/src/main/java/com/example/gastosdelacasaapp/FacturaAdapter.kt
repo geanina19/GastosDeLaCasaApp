@@ -60,7 +60,7 @@ class FacturaAdapter(
         }
 
         binding.editarButton.setOnClickListener {
-            // Actualiza la Factura existente en la base de datos
+
             val editFacturaIntent = Intent(context, CalcularGastosCasaActivity::class.java)
             editFacturaIntent.putExtra(CalcularGastosCasaActivity.Params.ID_FACTURA.name, factura.facturaId)
 

@@ -47,4 +47,6 @@
     <string name="contrasena3">Contraseña</string>
     <string name="email">Email</string>
     <string name="nombre_usuario3">Nombre usuario</string>
+    <string name="botonvolver">botonVolver</string>
+    <string name="volver2">volver</string>
 </resources>

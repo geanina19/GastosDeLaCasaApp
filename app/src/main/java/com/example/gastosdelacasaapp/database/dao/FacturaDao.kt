@@ -24,4 +24,6 @@ interface FacturaDao {
 
     @Insert
     fun save(factura: Factura)
+    @Query("SELECT * FROM factura WHERE facturaId=:facturaId")
+    fun findById(facturaId: Int): Factura?
 }

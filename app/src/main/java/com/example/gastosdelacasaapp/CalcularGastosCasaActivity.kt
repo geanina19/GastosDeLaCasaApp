@@ -14,10 +14,10 @@ class CalcularGastosCasaActivity : AppCompatActivity() {
 
     private lateinit var db: AppDatabase
 
-    private var facturaEditar: Factura? = null
+    private var idFacturaEditar: Int? = null
 
-    enum class Params{
-        FORMULARIO;
+    enum class Params {
+        ID_FACTURA;
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +33,17 @@ class CalcularGastosCasaActivity : AppCompatActivity() {
             )
             .allowMainThreadQueries().build()
 
-        facturaEditar = intent.getParcelableExtra(Params.FORMULARIO.name)
+        idFacturaEditar = intent.extras?.getInt(Params.ID_FACTURA.name)
+
+        idFacturaEditar?.let { idFacturaEditar ->
+            binding.anadirButton.text = "Modificar"
+            db.facturaDao().findById(idFacturaEditar)?.let { factura ->
+                binding.electricidadNumero.setText(factura.electricity.toString())
+                binding.gasNumero.setText(factura.gas.toString())
+                binding.aguaNumero.setText(factura.water.toString())
+
+            }
+        }
 
         binding.carcularBoton.setOnClickListener { v ->
             val numElecticidad = binding.electricidadNumero.text.toString().toDoubleOrNull() ?: 0.0
@@ -54,23 +64,33 @@ class CalcularGastosCasaActivity : AppCompatActivity() {
             // Sumar los tres valores directamente
             val total = numElecticidad + numGas + numAgua
 
-            val factura = Factura(
-                facturaId = 0,
-                electricity = numElecticidad,
-                gas = numGas,
-                water = numAgua
-            )
 
-            db
-                .facturaDao()
-                .save(factura)
+            if (idFacturaEditar == null) {
+                val factura = Factura(
+                    facturaId = 0,
+                    electricity = numElecticidad,
+                    gas = numGas,
+                    water = numAgua
+                )
 
-            //finish()
+                db
+                    .facturaDao()
+                    .save(factura)
+            } else {
+                val factura = Factura(
+                    facturaId = idFacturaEditar!!,
+                    electricity = numElecticidad,
+                    gas = numGas,
+                    water = numAgua
+                )
 
-            val intent = Intent (
-                this,
-                VerFacturasActivity::class.java)
-            startActivity(intent)
+                db
+                    .facturaDao()
+                    .update(factura)
+            }
+
+
+            finish()
         }
     }
 }

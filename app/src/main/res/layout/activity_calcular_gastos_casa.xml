@@ -110,6 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/calcular"
+        android:backgroundTint="@color/purple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.312"
@@ -136,6 +137,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:text="@string/anadir"
+        android:backgroundTint="@color/purple"
         app:layout_constraintBottom_toBottomOf="@+id/carcularBoton"
         app:layout_constraintStart_toEndOf="@+id/carcularBoton"
         app:layout_constraintTop_toTopOf="@+id/carcularBoton"
@@ -173,16 +175,16 @@
     <ImageButton
         android:id="@+id/volverButton"
         style="@style/Widget.AppCompat.ImageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="43dp"
+        android:layout_height="37dp"
         android:layout_marginTop="10dp"
-        android:backgroundTint="#673AB7"
+
+        android:background="@drawable/roundcorner"
         android:contentDescription="@string/volver2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.027"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
         app:srcCompat="@drawable/arrow_back_24px"
         tools:ignore="TouchTargetSizeCheck" />
 

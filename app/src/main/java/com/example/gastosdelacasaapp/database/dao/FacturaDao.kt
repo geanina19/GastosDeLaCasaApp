@@ -11,6 +11,7 @@ import com.example.gastosdelacasaapp.model.Factura
 @Dao
 interface FacturaDao {
 
+    //---------------------ver---------------
     @Query("SELECT * FROM factura")
     fun list(): List<Factura>
 
@@ -22,8 +23,11 @@ interface FacturaDao {
     @Update
     fun update(factura: Factura)
 
-    @Insert
-    fun save(factura: Factura)
     @Query("SELECT * FROM factura WHERE facturaId=:facturaId")
     fun findById(facturaId: Int): Factura?
+
+    //---------------------guardar---------------
+    @Insert
+    fun save(factura: Factura)
+
 }

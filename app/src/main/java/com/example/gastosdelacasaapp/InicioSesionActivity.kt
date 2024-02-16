@@ -24,6 +24,7 @@ class InicioSesionActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT)
                     .show()
             }
+            /*
             else {
                 if (binding.contrasena.text.toString() == "Nohay2sin3") {
                     val intent = Intent (
@@ -39,6 +40,11 @@ class InicioSesionActivity : AppCompatActivity() {
                         .show()
                 }
             }
+            */
+            val intent = Intent (
+                    this,
+            VerFacturasActivity::class.java)
+            startActivity(intent)
         }
 
         binding.buttonCrearCuentaIniciarSesionActivity.setOnClickListener {

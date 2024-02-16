@@ -92,5 +92,9 @@ class CalcularGastosCasaActivity : AppCompatActivity() {
 
             finish()
         }
+
+        binding.volverButton.setOnClickListener {
+            finish()
+        }
     }
 }

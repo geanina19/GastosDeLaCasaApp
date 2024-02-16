@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/fondomarmol">
+
 
     <TextView
         android:id="@+id/idFacturaTextView"
@@ -36,13 +38,13 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        android:background="#FFFFFF"
         android:contentDescription="@string/todo1"
         app:layout_constraintEnd_toStartOf="@+id/electricityTextView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/idFacturaTextView"
-        app:srcCompat="@drawable/electricity" />
+        app:srcCompat="@drawable/electricity"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/electricityTextView"
@@ -65,7 +67,8 @@
         android:contentDescription="@string/todo2"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/electricityImageView"
-        app:srcCompat="@drawable/fire" />
+        app:srcCompat="@drawable/fire"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/gasTextView"
@@ -85,7 +88,8 @@
         android:contentDescription="@string/todo4"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/gasImageView"
-        app:srcCompat="@drawable/water" />
+        app:srcCompat="@drawable/water"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/waterTextView"
